@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">newChronosmart</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="training">Training</string>
+    <string name="result">Result</string>
 </resources>
