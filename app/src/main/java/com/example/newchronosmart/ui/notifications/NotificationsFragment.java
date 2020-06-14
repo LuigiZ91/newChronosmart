@@ -12,21 +12,34 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.UUID;
+
+
 import com.example.newchronosmart.R;
 
-public class NotificationsFragment extends Fragment {
+public class NotificationsFragment extends Fragment
+{
 
     private NotificationsViewModel notificationsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, Bundle savedInstanceState)
+    {
         notificationsViewModel =
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>()
+        {
             @Override
-            public void onChanged(@Nullable String s) {
+            public void onChanged(@Nullable String s)
+            {
                 textView.setText(s);
             }
         });
